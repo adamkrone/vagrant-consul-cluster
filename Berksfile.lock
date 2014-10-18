@@ -2,7 +2,7 @@ DEPENDENCIES
   apt
   consul
     git: git://github.com/johnbellone/consul-cookbook.git
-    revision: f8f2cf17387b296cc6cf9546f4ef88f968eda360
+    revision: d75fe45f809042d9e4808ff6e9ba84504db3f42e
 
 GRAPH
   7-zip (1.0.2)

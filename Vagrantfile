@@ -36,8 +36,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           }
         }
       end
-
-      join_cluster(node) unless num == 1
     end
   end
 end
@@ -55,8 +53,4 @@ def add_ip(num)
   last_octet = (ip.last.to_i + (num-1)).to_s
   address = ip[0..-2].push last_octet
   return address.join('.')
-end
-
-def join_cluster(node)
-  node.vm.provision :shell, inline: "consul join #{NODE_IP_ADDRESSES.first}"
 end
