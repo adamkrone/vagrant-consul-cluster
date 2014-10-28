@@ -9,10 +9,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.omnibus.chef_version = :latest
 
-  if Vagrant.has_plugin?("vagrant-cachier")
-    config.cache.scope = :box
-  end
-
   NUMBER_NODES = 3
   STARTING_IP_ADDRESS = "172.20.20.10"
   NODE_IP_ADDRESSES = ip_addresses
