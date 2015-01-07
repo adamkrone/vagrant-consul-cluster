@@ -3,6 +3,11 @@ DEPENDENCIES
   consul
     git: git://github.com/johnbellone/consul-cookbook.git
     revision: 1553151a302167f385d64b8d9edfe2257f681419
+  consul-cluster
+    git: git://github.com/adamkrone/chef-consul-cluster.git
+    revision: 4918b5988789faf1f3022b0241af76971a2c704f
+  vagrant-consul-cluster
+    path: cookbooks/vagrant-consul-cluster
 
 GRAPH
   7-zip (1.0.2)
@@ -18,11 +23,16 @@ GRAPH
     golang (~> 1.4.0)
     runit (>= 0.0.0)
     yum-repoforge (>= 0.0.0)
+  consul-cluster (0.1.0)
+    consul (>= 0.0.0)
   golang (1.4.0)
   runit (1.5.12)
     build-essential (>= 0.0.0)
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
+  vagrant-consul-cluster (0.1.0)
+    apt (>= 0.0.0)
+    consul-cluster (>= 0.0.0)
   windows (1.36.1)
     chef_handler (>= 0.0.0)
   yum (3.5.2)

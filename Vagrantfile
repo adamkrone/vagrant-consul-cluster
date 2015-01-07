@@ -15,26 +15,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   1.upto(NUMBER_NODES) do |num|
     config.vm.define "consul0#{num}" do |node|
-      ip_address = NODE_IP_ADDRESSES[num-1]
       node.vm.hostname = "consul0#{num}"
-      node.vm.network "private_network", ip: ip_address
+      node.vm.network "private_network", ip: NODE_IP_ADDRESSES[num-1]
 
       node.vm.provision :chef_solo do |chef|
-        chef.add_recipe "apt::default"
-        chef.add_recipe "consul::default"
-        chef.add_recipe "consul::ui"
-
-        chef.json = {
-          consul: {
-            service_mode: 'cluster',
-            bootstrap_expect: NUMBER_NODES.to_s,
-            servers: NODE_IP_ADDRESSES,
-            bind_interface: 'eth1',
-            bind_addr: ip_address,
-            datacenter: 'vagrant',
-            serve_ui: true
-          }
-        }
+        chef.add_recipe 'vagrant-consul-cluster::default'
       end
     end
   end
