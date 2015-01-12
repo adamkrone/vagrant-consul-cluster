@@ -5,7 +5,7 @@ DEPENDENCIES
     revision: 1553151a302167f385d64b8d9edfe2257f681419
   consul-cluster
     git: git://github.com/adamkrone/chef-consul-cluster.git
-    revision: 4918b5988789faf1f3022b0241af76971a2c704f
+    revision: c7c371c52438abbae8256e2b1e81fe7c76686adb
   vagrant-consul-cluster
     path: cookbooks/vagrant-consul-cluster
 
@@ -38,6 +38,6 @@ GRAPH
   yum (3.5.2)
   yum-epel (0.6.0)
     yum (~> 3.0)
-  yum-repoforge (0.4.0)
+  yum-repoforge (0.5.0)
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
