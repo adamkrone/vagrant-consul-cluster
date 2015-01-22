@@ -2,10 +2,16 @@ DEPENDENCIES
   apt
   consul
     git: git://github.com/johnbellone/consul-cookbook.git
-    revision: 1553151a302167f385d64b8d9edfe2257f681419
+    revision: df4891d56b8252fad50056eb29cdabfe15c68493
   consul-cluster
     git: git://github.com/adamkrone/chef-consul-cluster.git
-    revision: c7c371c52438abbae8256e2b1e81fe7c76686adb
+    revision: 6628ea21c0fd97c0bb0cb0e2d8994e417c9e06de
+  consul-services
+    git: git://github.com/adamkrone/chef-consul-services.git
+    revision: 41bee3919531e88a391268d74cf780543d810430
+  consul-watches
+    git: git://github.com/adamkrone/chef-consul-watches.git
+    revision: 746f856c0c138c6702e672ed776bd53bcc3877a7
   vagrant-consul-cluster
     path: cookbooks/vagrant-consul-cluster
 
@@ -25,8 +31,15 @@ GRAPH
     yum-repoforge (>= 0.0.0)
   consul-cluster (0.1.0)
     consul (>= 0.0.0)
+    consul-services (>= 0.0.0)
+  consul-services (0.2.0)
+    consul (>= 0.0.0)
+    curl (>= 0.0.0)
+  consul-watches (0.1.0)
+    consul (>= 0.0.0)
+  curl (2.0.1)
   golang (1.4.0)
-  runit (1.5.12)
+  runit (1.5.14)
     build-essential (>= 0.0.0)
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
