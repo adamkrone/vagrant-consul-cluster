@@ -3,12 +3,15 @@ DEPENDENCIES
   consul
     git: git://github.com/johnbellone/consul-cookbook.git
     revision: db93cb69f095b9300d4e530257151abfaef273d4
+  consul-alerts
+    git: git://github.com/adamkrone/chef-consul-alerts.git
+    revision: 110b4e3d17cd48c99447e04c4df83ba0767af710
   consul-cluster
     git: git://github.com/thirdwavellc/chef-consul-cluster.git
-    revision: 6af6fa3e3a4a2062b0ba5273931644a7e697e4ad
+    revision: ff58ac44da9e2058c019e6da880314fefdada227
   consul-services
     git: git://github.com/thirdwavellc/chef-consul-services.git
-    revision: c290d5bc84cf332d6995d9cb7c4b06ea1803b144
+    revision: 376be5af0a933590f5f78a68b3777bdd80ad50d0
   vagrant-consul-cluster
     path: cookbooks/vagrant-consul-cluster
 
@@ -23,8 +26,10 @@ GRAPH
     libarchive (>= 0.0.0)
     runit (>= 0.0.0)
     yum-repoforge (>= 0.0.0)
+  consul-alerts (0.1.0)
   consul-cluster (0.1.0)
     consul (>= 0.0.0)
+    consul-alerts (>= 0.0.0)
     consul-services (>= 0.0.0)
   consul-services (0.2.0)
     consul (>= 0.0.0)
@@ -40,8 +45,9 @@ GRAPH
     yum-epel (>= 0.0.0)
   vagrant-consul-cluster (0.1.0)
     apt (>= 0.0.0)
+    consul-alerts (>= 0.0.0)
     consul-cluster (>= 0.0.0)
-  yum (3.5.2)
+  yum (3.5.3)
   yum-epel (0.6.0)
     yum (~> 3.0)
   yum-repoforge (0.5.0)
